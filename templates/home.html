@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Airfoil Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Item_Weight" placeholder="Item_Weight" required="required" /><br>
+    	<input type="text" name="Item_Visibility" placeholder="Item_Visibility" required="required" /><br>
+        <input type="text" name="Item_MRP" placeholder="Item_MRP" required="required" /><br>
+        <input type="text" name="Item_Visibility_meansratio" placeholder="Item_Visibility_meansratio" required="required" /><br>
+        <input type="text" name="Outlet_years" placeholder="Outlet_years" required="required" /><br>
+
+
+      <input type="text" name="Item_Fat_Content_0" placeholder="Item_Fat_Content_0" required="required" /><br>
+    	<input type="text" name="Item_Fat_Content_1" placeholder="Item_Fat_Content_1" required="required" /><br>
+        <input type="text" name="Item_Fat_Content_2" placeholder="Item_Fat_Content_2" required="required" /><br>
+        <input type="text" name="Outlet_Size_0" placeholder="Outlet_Size_0" required="required" /><br>
+        <input type="text" name="Outlet_Size_1" placeholder="Outlet_Size_1" required="required" /><br>
+
+
+      <input type="text" name="Outlet_Size_2" placeholder="Outlet_Size_2" required="required" /><br>
+    	<input type="text" name="Outlet_Location_Type_0" placeholder="Outlet_Location_Type_0" required="required" /><br>
+        <input type="text" name="Outlet_Location_Type_1" placeholder="Outlet_Location_Type_1" required="required" /><br>
+        <input type="text" name="Outlet_Location_Type_2" placeholder="Outlet_Location_Type_2" required="required" /><br>
+        
+
+
+      <input type="text" name="Outlet_Type_0" placeholder="Outlet_Type_0" required="required" /><br>
+    	<input type="text" name="Outlet_Type_1" placeholder="Outlet_Type_1" required="required" /><br>
+        <input type="text" name="Outlet_Type_2" placeholder="Outlet_Type_2" required="required" /><br>
+        <input type="text" name="Outlet_Type_3" placeholder="Outlet_Type_3" required="required" /><br>
+        <input type="text" name="Item_Type_Combined_0" placeholder="Item_Type_Combined_0" required="required" /><br>
+
+
+      <input type="text" name="Item_Type_Combined_1" placeholder="Item_Type_Combined_1" required="required" /><br>
+    	<input type="text" name="Item_Type_Combined_2" placeholder="Item_Type_Combined_2" required="required" /><br>
+        <input type="text" name="Outlet_0" placeholder="Outlet_0" required="required" /><br>
+		<input type="text" name="Outlet_1" placeholder="Outlet_1" required="required" /><br>
+		<input type="text" name="Outlet_2" placeholder="Outlet_2" required="required" /><br>
+		<input type="text" name="Outlet_3" placeholder="Outlet_3" required="required" /><br>
+		<input type="text" name="Outlet_4" placeholder="Outlet_4" required="required" /><br>
+		<input type="text" name="Outlet_5" placeholder="Outlet_5" required="required" /><br>
+		<input type="text" name="Outlet_6" placeholder="Outlet_6" required="required" /><br>
+		<input type="text" name="Outlet_7" placeholder="Outlet_7" required="required" /><br>
+		<input type="text" name="Outlet_8" placeholder="Outlet_8" required="required" /><br>
+		<input type="text" name="Outlet_9" placeholder="Outlet_9" required="required" /><br>
+		
+
+       
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
